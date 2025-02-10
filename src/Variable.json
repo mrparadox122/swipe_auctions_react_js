@@ -1,0 +1,4 @@
+{
+    "baseUrl": "https://api.swipeauctions.org:8080/api/",
+    "TOKEN": "your-secure-api-key"
+}
