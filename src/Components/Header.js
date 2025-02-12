@@ -3,6 +3,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { UserContext } from "../Controllers/UserContext";
 import Variables from "../Variable.json";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const { userData, setUserData, metaData, setMetaData } = useContext(UserContext);
@@ -74,15 +75,15 @@ const Header = () => {
             </div>
             <nav className="navContainer">
                 <ul className="navBar">
-                    <li><a href="#home" className="navLink">Home</a></li>
-                    <li><a href="#auctions" className="navLink">Auctions</a></li>
-                    <li><a href="#fixed-deals" className="navLink">Fixed Deals</a></li>
-                    <li><a href="#dealers-list" className="navLink">Dealers List</a></li>
-                    <li><a href="#about-us" className="navLink">About Us</a></li>
+                    <li><Link to="/" className="navLink">Home</Link></li>
+                    <li><Link to="/Auctions" className="navLink">Auctions</Link></li>
+                    <li><Link to="/FixedDeals" className="navLink">Fixed Deals</Link></li>
+                    <li><Link to="/DealersList" className="navLink">Dealers List</Link></li>
+                    <li><Link to="/AboutUs" className="navLink">About Us</Link></li>
                 </ul>
                 <div className="nav-buttons">
                     <button className="helpButton">Help Center</button>
-                    <button className="sellCarButton">Sell your car</button>
+                    <button className="sellCarButton">Inventory</button>
                 </div>
             </nav>
         </header>

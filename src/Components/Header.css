@@ -1,5 +1,5 @@
 .container {
-    background: linear-gradient(to right, #0030a1, #0050c1);
+    background: linear-gradient(to right, #0030a1, #002355);
     padding: 10px 20px;
     display: flex;
     flex-direction: row;
@@ -47,6 +47,7 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+    font-weight: 900;
   }
   
   .phoneIcon {
@@ -60,6 +61,7 @@
     border-radius: 5px;
     padding: 8px 12px;
     margin-left: 10px;
+    font-weight: 900;
   }
   
   .navContainer {
@@ -77,6 +79,7 @@
     justify-content: center;
     display: flex;
     flex-direction: row;
+    gap: 60px;
   }
   
   .navLink {
@@ -85,6 +88,17 @@
     text-decoration: none;
     font-weight: bold;
   }
+  .navLink:hover {
+    color: #f4a21c;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-buttons {
+    display: flex;
+    margin-left: 50px;
+    gap: 40px;
+  }
   .helpButton {
     background: #f4a21c;
     color: black;
@@ -92,6 +106,7 @@
     border-radius: 5px;
     padding: 8px 12px;
     margin-left: 10px;
+    font-weight: 900;
   }
   
   .sellCarButton {
@@ -101,4 +116,5 @@
     border-radius: 5px;
     padding: 8px 12px;
     margin-left: 10px;
+    font-weight: 900;
   }  
