@@ -1,120 +1,178 @@
 .container {
-    background: linear-gradient(to right, #0030a1, #002355);
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background: linear-gradient(to right, #0030a1, #002355);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  flex-direction: column;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logoText {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.searchBar {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 15px;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.requestCallbackButton {
+  background: #f4a21c;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: 900;
+}
+
+.phoneIcon {
+  margin-right: 5px;
+}
+
+.authButton {
+  background: #f4a21c;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.navBar {
+  background-color: black;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.navLink {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navLink:hover {
+  color: #f4a21c;
+}
+.nav-buttons {
+  display: flex;
+  margin-left: 50px;
+  gap: 40px;
+}
+.helpButton {
+  background: #f4a21c;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.sellCarButton {
+  background: #f4a21c;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-weight: 900;
+} 
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
   }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-    margin: 15px;
-    flex-direction: column;
+
+  header {
+    padding-bottom: 0px;
   }
-  
-  .logo {
-    width: 50px;
-    margin-right: 10px;
-  }
-  
-  .logoText {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .searchBar {
-    width: 50%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin: 15px;
-  }
-  
-  .actionsContainer {
-    display: flex;
-    align-items: center;
-    margin: 15px;
-  }
-  
-  .requestCallbackButton {
-    background: #f4a21c;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    font-weight: 900;
-  }
-  
-  .phoneIcon {
-    margin-right: 5px;
-  }
-  
-  .authButton {
-    background: #f4a21c;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin-left: 10px;
-    font-weight: 900;
-  }
-  
+
   .navContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: black;
-  }
-  
-  .navBar {
-    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 10px 0;
-    align-items: center;
+    background: black;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .navBar {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    justify-content: space-around; /* Ensures even spacing */
+    padding: 0;
+    margin: 0;
+    gap: 0px;
   }
-  
+
+  .navBar li {
+    flex: 1; /* Ensures each item takes up equal space */
+    text-align: center;
+    list-style: circle;
+  }
+
   .navLink {
+    font-size: 12px;
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-  }
-  .navLink:hover {
-    color: #f4a21c;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .nav-buttons {
     display: flex;
-    margin-left: 50px;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
   }
-  .helpButton {
-    background: #f4a21c;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin-left: 10px;
-    font-weight: 900;
+
+  .navLink svg {
+    font-size: 20px;
   }
-  
-  .sellCarButton {
-    background: #f4a21c;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin-left: 10px;
-    font-weight: 900;
-  }  
+
+  .nav-buttons {
+    display: none;
+  }
+}

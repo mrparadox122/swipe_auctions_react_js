@@ -1,28 +1,425 @@
+.MainContainer {
+  display: auto;
+}
 .Bannercontainer {
+  width: 100%;
+  margin: auto;
+  margin-top: 5;
+}
+.BannerImage {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.banner-button {
+  display: grid;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+  align-items: center;
+  justify-items: center;
+}
+.banner-button:hover {
+  background: #333;
+  transform: translateX(-50%) scale(1.05);
+}
+.banner-button:active {
+  background: #555;
+  transform: translateX(-50%) scale(0.95);
+}
+.category-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.category-card {
+  background: linear-gradient(to right, #dadada, #ffffff);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+.category-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.category-label {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 28px;
+  color: #333;
+  background: #FFB839;
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family:'Poppins';
+  border-radius: 5px;
+}
+.auction-container {
+  max-width: 100vw;
+  padding: 20px;
+  text-align: center;
+}
+.carousel-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.marquee h3 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.auction-card {
+  background: #EFF8FD;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.auction-card:hover {
+  transform: scale(1.05);
+}
+.auction-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.auction-info {
+  padding: 15px;
+  text-align: left;
+}
+.auction-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.auction-location {
+  font-size: 14px;
+  color: #555;
+}
+.auction-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.bid-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.details-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.bid-button:hover,
+.details-link:hover {
+  opacity: 0.8;
+}
+
+.brand-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.brand-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.brand-grid {
+  background: #f1f9fe;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 80px;
+}
+
+.brand-card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 180px;
+}
+
+.brand-image {
+  max-height: 100px;
+  max-width: 120px;
+}
+
+.brand-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.brand-view-all {
+  background: #ffb41f;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Insurance.css */
+.insurance-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.insurance-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.insurance-grid {
+  background: #f1f9fe;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 50px;
+}
+
+.insurance-card {
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 180px;
+}
+
+.insurance-image {
+  max-height: 100px;
+  max-width: 180px;
+}
+
+.fixedDeals-container {
+  max-width: 100vw;
+  padding: 20px;
+  text-align: center;
+}
+.carousel-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.marquee h3 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.fixedDeals-card {
+  background: #EFF8FD;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.fixedDeals-card:hover {
+  transform: scale(1.05);
+}
+.fixedDeals-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.fixedDeals-info {
+  padding: 15px;
+  text-align: left;
+}
+.fixedDeals-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.fixedDeals-location {
+  font-size: 14px;
+  color: #555;
+}
+.fixedDeals-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.fixedDealsdetails-link {
+  color: #059DCC;
+  text-decoration: none;
+  font-size: 15px;
+}
+.bid-button:hover,
+.details-link:hover {
+  opacity: 0.8;
+}
+
+.swipeAuctionsIntro {
+  background-color: #f1f9fe;
+  text-align: left;
+  padding: 40px 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+/* Banner image */
+.swipeAuctionsBanner {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Main heading */
+.swipeAuctionsHeading {
+  color: #2365F6;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Subtext */
+.swipeAuctionsSubtext {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 30px;
+  max-width: 700px;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+/* Features row */
+.swipeAuctionsFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Each feature card */
+.featureCard {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featureCard h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #059DCC;
+}
+
+.featureCard p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Call-to-action text at the bottom */
+.swipeAuctionsCTA {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2365F6;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .MainContainer {
+    display: auto;
+    margin-bottom: 80px;
+  }
+  .Bannercontainer {
     width: 100%;
     margin: auto;
-    margin-top: 5;
   }
-  
   .BannerImage {
     width: 100%;
-    height: auto;
+    height: 30vh;
+    z-index: 1;
   }
-  .category-title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-  }
-  
   .categories-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 20px;
-    flex-wrap: wrap;
     padding: 20px;
   }
-  
   .category-card {
     background: #f8f8f8;
     border-radius: 10px;
@@ -30,120 +427,113 @@
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    width: 200px;
+    width: 100%;
+    max-width: 120px;
   }
-  
-  .category-card:hover {
-    transform: scale(1.05);
-  }
-  
   .category-image {
     width: 100%;
-    height: 120px;
+    height: 80px;
     object-fit: cover;
     border-radius: 8px;
   }
-  
+
   .category-label {
     margin-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 900;
+    font-size: 20px;
     color: #333;
+    background: #FFB839;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family:'Poppins';
+    border-radius: 5px;
   }
 
-  .auction-container {
-    max-width: 100vw;
+  .insurance-section {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
+  }
+  
+  .insurance-title {
     text-align: center;
-  }
-  
-  .carousel-title {
-    font-size: 18px;
-    font-weight: bold;
     margin-bottom: 20px;
-  }
-  .marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-  }
-  
-  .marquee h3 {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 10s linear infinite;
-  }
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
-  
-  .auction-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    max-width: 290px;
-  }
-  
-  .auction-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .auction-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .auction-info {
-    padding: 15px;
-    text-align: left;
-  }
-  
-  .auction-price {
-    font-size: 18px;
     font-weight: bold;
-    color: #007bff;
   }
   
-  .auction-location {
-    font-size: 14px;
-    color: #555;
+  .insurance-grid {
+    background: #f1f9fe;
+    border-radius: 8px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
   
-  .auction-buttons {
+  .insurance-card {
+    background: #fff;
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
     align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
   }
   
-  .bid-button {
-    background: #007bff;
-    color: white;
+  .insurance-image {
+    max-height: 50px;
+    max-width: 100px;
+  }
+
+  .brand-section {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .brand-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .brand-grid {
+    background: #f1f9fe;
+    border-radius: 8px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .brand-card {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100px;
+  }
+  
+  .brand-image {
+    max-height: 100px;
+    max-width: 120px;
+  }
+  
+  .brand-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .brand-view-all {
+    background: #ffb41f;
     border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
     cursor: pointer;
   }
-  
-  .details-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .bid-button:hover,
-  .details-link:hover {
-    opacity: 0.8;
-  }
-  
+}
